@@ -44,3 +44,17 @@
     # Remove apache
     - ansible-playbook --ask-become-pass remove_apache.yml
     BECOME password: *****
+
+## The 'when' Conditional
+    # Before starting anything do a `git pull` to get all the changes that might your teammates pushed
+    - git pull
+
+    # Add another server with different distribution like CentOs
+    # In the playbook add `when`
+    - when: ansible_distribution == "Ubuntu"
+    
+    # Gather information to your newly added server
+    - ansible all -m gather-facts --limit $NEW_SERVER_IP | grep ansible_distribution
+    # For CentOS distribution you need to start the httpd service and enable port 80 in order to work
+    - sudo systemctl start httpd
+    - sudo firewall-cmd --add-port=80/tcp
