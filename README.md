@@ -36,4 +36,11 @@
     - ansible all -m apt -a "upgrade=dist" -become --ask-become-pass
     BECOME password: <your_user_password>
 
-    
+## Create playbook `install_apached.yml` file
+    # Run command to run with your playbook
+    - ansible-playbook --ask-become-pass install_apache.yml
+    BECOME password: *****
+
+    # Remove apache
+    - ansible-playbook --ask-become-pass remove_apache.yml
+    BECOME password: *****
