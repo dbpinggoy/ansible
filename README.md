@@ -1,15 +1,18 @@
-# Install ansible
+
+# Ansible Essentials
+
+## Install ansible
     - sudo apt install ansible
 
-# Create an inventory
+## Create an inventory
     - 
-# Run ansible command -i for inventory file and -m is for module pass with ping which is going to access the server with ssh key
+## Run ansible command -i for inventory file and -m is for module pass with ping which is going to access the server with ssh key
     - ansible  all --key-file ~/.ssh/ansible -i inventory -m ping
 
-# Create an ansible config file in the root directory
+## Create an ansible config file in the root directory
     - ansible.cfg
 
-# Shorten the command, it will look for the config in the config file which is ansible.cfg 
+## Shorten the command, it will look for the config in the config file which is ansible.cfg 
     - ansible all -m ping
     - ansible all --list-hosts  #it will list all the host
     - ansible all -m gather_facts 
@@ -20,7 +23,7 @@
     # this command will do apt update to all your servers with sudo priveledges
     - ansible all -m apt -a update_cache=true --become --ask-become-pass 
     BECOME password: <your_user_password>
-    
+
     # install vim-nox to all the servers in the inventory list
     - ansible all -m apt -a name=vim-nox --become --ask-become-pass
     BECOME password: <your_user_password>
