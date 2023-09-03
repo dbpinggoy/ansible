@@ -58,3 +58,9 @@
     # For CentOS distribution you need to start the httpd service and enable port 80 in order to work
     - sudo systemctl start httpd
     - sudo firewall-cmd --add-port=80/tcp
+
+## Targeting specific nodes
+    # Create a copy of your current `install_apache.yml` playbook and name it `site.yml`
+    # Organized your inventory server with specific group and each purpose like web server, db server or file server
+    # Run the `site.yml` playbook
+    - ansible-playbook ask-become-pass site.yml
