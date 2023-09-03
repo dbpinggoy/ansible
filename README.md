@@ -64,3 +64,12 @@
     # Organized your inventory server with specific group and each purpose like web server, db server or file server
     # Run the `site.yml` playbook
     - ansible-playbook ask-become-pass site.yml
+
+## Tags
+    # Add tags in the playboook and target specific tags
+    # Run the playbook with tags
+    - ansible-playbook --tags "apache,db" --ask-become-pass site.yml
+
+## Managing Files
+    # Create a `files` directory
+    # Add default_site.html file in the files directory
