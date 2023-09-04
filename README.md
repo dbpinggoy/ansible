@@ -76,3 +76,8 @@
 
 ## Managing Services
     # Add new play in site.yml playbook in the web server to start httpd service to start automatically
+
+## Adding Users & Bootstrapping
+    # Adding user in the playbook
+
+## 
