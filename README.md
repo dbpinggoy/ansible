@@ -73,3 +73,6 @@
 ## Managing Files
     # Create a `files` directory
     # Add default_site.html file in the files directory
+
+## Managing Services
+    # Add new play in site.yml playbook in the web server to start httpd service to start automatically
