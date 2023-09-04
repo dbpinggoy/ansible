@@ -80,4 +80,6 @@
 ## Adding Users & Bootstrapping
     # Adding user in the playbook
 
-## 
+## Roles
+    # Organizing playbook base on each role
+    
